@@ -2,12 +2,14 @@
 public class Application {
     public static void main(String[] args) {
        try {
-           EntierNaturel entier = new EntierNaturel(12);
+           EntierNaturel entier = new EntierNaturel(1);
            System.out.println("val = "+ entier.getVal());
            entier.decrementer();
-           entier.setVal(-12);
+           entier.decrementer();
+           entier.setVal(-1);
        }catch (NombreNegativeException e){
-           System.out.printf(e.getMessage());
+           System.out.println(e.getMessage());
+           System.out.println("Value causes the Error "+e.getValErr());
        }
     }
 }
